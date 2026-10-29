@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Memorando SCJN Bridge",
+  "description": "Salida estructurada de la skill scjn-bridge. Markdown para humano, JSON para máquina.",
+  "type": "object",
+  "required": ["caso_id", "etapa_procesal", "leading_case", "tesis_trascendencia", "prueba_falla_sistemica", "estrategia_litigio", "argumento_central"],
+  "properties": {
+    "caso_id": { "type": "string", "example": "Amparo Indirecto 334/2026-4A" },
+    "etapa_procesal": { "type": "string", "enum": ["Amparo Indirecto", "Recurso de Queja", "SEFA", "Reclamación", "Otro"] },
+    "leading_case": {
+      "type": "object",
+      "required": ["por_que_vehiculo_idoneo", "criterio_trascendencia_invocado"],
+      "properties": {
+        "por_que_vehiculo_idoneo": { "type": "string" },
+        "criterio_trascendencia_invocado": { "type": "string", "description": "Acuerdo General 4/2025, párrafo/artículo citado o 'no localizado'" }
+      }
+    },
+    "tesis_trascendencia": {
+      "type": "object",
+      "required": ["texto_jurisprudencial", "fuente_o_estatus"],
+      "properties": {
+        "texto_jurisprudencial": { "type": "string", "description": "Un párrafo en formato tesis" },
+        "fuente_o_estatus": { "type": "string", "enum": ["Acuerdo 4/2025 citado", "Tesis aislada", "Jurisprudencia", "Propuesta de criterio - no verificada"] }
+      }
+    },
+    "prueba_falla_sistemica": {
+      "type": "array",
+      "description": "3-5 casos CJF. Si no hay acceso, dejar vacío pero con estrategia_busqueda.",
+      "items": {
+        "type": "object",
+        "required": ["tribunal", "palabras_clave", "hallazgo", "fuente_verificable", "estado_verificacion"],
+        "properties": {
+          "tribunal": { "type": "string" },
+          "palabras_clave": { "type": "array", "items": { "type": "string" } },
+          "hallazgo": { "type": "string" },
+          "fuente_verificable": { "type": "string", "description": "URL CJF / número de registro o 'pendiente verificación'" },
+          "estado_verificacion": { "type": "string", "enum": ["verificado", "pendiente verificación", "no localizado"] }
+        }
+      }
+    },
+    "estrategia_busqueda_cjf": { "type": "string", "description": "Si no hay acceso en vivo, describir query exacta para CJF" },
+    "estrategia_litigio": {
+      "type": "object",
+      "required": ["via_procesal", "fundamento", "pasos"],
+      "properties": {
+        "via_procesal": { "type": "string", "enum": ["SEFA", "Recurso de Queja", "Reclamación", "Otra"] },
+        "fundamento": { "type": "string" },
+        "pasos": { "type": "array", "items": { "type": "string" } },
+        "plazos_riesgos": { "type": "string" }
+      }
+    },
+    "argumento_central": {
+      "type": "object",
+      "required": ["texto_primera_persona", "idea_fuerza"],
+      "properties": {
+        "texto_primera_persona": { "type": "string" },
+        "idea_fuerza": { "type": "string", "example": "renuncia jurisdiccional" }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Protocolo Revision Documento",
+  "description": "Salida del protocolo de revisión. Garantiza trazabilidad hecho vs inferencia.",
+  "type": "object",
+  "required": ["documentos", "extracciones", "mapa_hechos", "hallazgos"],
+  "properties": {
+    "documentos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["nombre", "tipo", "fojas"],
+        "properties": {
+          "nombre": { "type": "string" },
+          "tipo": { "type": "string" },
+          "fojas": { "type": "string" },
+          "fecha": { "type": "string" }
+        }
+      }
+    },
+    "extracciones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cita_textual", "referencia", "tipo"],
+        "properties": {
+          "cita_textual": { "type": "string", "maxLength": 300 },
+          "referencia": { "type": "string", "example": "p.3 párr.2" },
+          "tipo": { "type": "string", "enum": ["HECHO", "VACÍO"] }
+        }
+      }
+    },
+    "mapa_hechos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["contenido", "tipo", "fuente", "confianza"],
+        "properties": {
+          "contenido": { "type": "string" },
+          "tipo": { "type": "string", "enum": ["HECHO", "INFERENCIA", "VACÍO"] },
+          "fuente": { "type": "string" },
+          "confianza": { "type": "string", "enum": ["alta", "media - verificar", "baja"] }
+        }
+      }
+    },
+    "hallazgos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["hallazgo", "fundamento_tentativo", "que_falta"],
+        "properties": {
+          "hallazgo": { "type": "string" },
+          "fundamento_tentativo": { "type": "string" },
+          "que_falta": { "type": "string" },
+          "semaforo": { "type": "string", "enum": ["🟢", "🟡", "🔴"] }
+        }
+      }
+    }
+  }
+}
