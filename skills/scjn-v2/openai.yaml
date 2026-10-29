@@ -1,0 +1,35 @@
+# openai.yaml — configuración de registro de la skill para ChatGPT / Codex / API
+# Relación: YAML = criterio declarativo (qué es la skill, cuándo se activa, dónde vive)
+interface:
+  display_name: Deep Law — SCJN Bridge
+  short_description: Ingeniería constitucional para litigio de trascendencia ante SCJN (Acuerdo 4/2025)
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+
+policy:
+  products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
+  # v2: invocación explícita para evitar activaciones accidentales en temas sensibles
+  allow_implicit_invocation: false
+  # skill solo responde si el usuario la invoca o si el contexto contiene etapa_procesal legal
+  invocation_triggers:
+    - "SCJN"
+    - "SEFA"
+    - "facultad de atracción"
+    - "trascendencia"
+    - "Acuerdo General 4/2025"
+    - "recurso de queja"
+
+skills:
+  - name: scjn-bridge
+    entry: SKILL.md
+    version: "2.0"
+  - name: protocolo-revision-documentos
+    entry: ../protocolo-revision/SKILL.md
+    version: "2.0"
+
+# Datos del caso NO van aquí. Van en _context/caso.json (inyectado por sesión)
+# Así evitas duplicar 5 meses vs 7 meses y mantienes una sola fuente de verdad
