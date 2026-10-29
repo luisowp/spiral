@@ -67,3 +67,25 @@ Siguiente paso:
 - Depurar: qué se conserva, qué se fusiona, qué se elimina.
 - Formalizar el Protocolo de revisión como skill central transferible.
 - Guardar en GitHub solo el rastro mínimo necesario (memoria periférica).
+
+---
+
+### Tema 3 — Acotación
+- Fecha: 29 de octubre (noche)
+- Lugar en la espiral: centro — redefinición del objetivo.
+- Corrección: olvidar por ahora LGDNNA / protocolo infancia como mezcla. El precedente se construye después; ahora el foco técnico es otro.
+
+Idea central: analizar de manera independiente el **Acuerdo General 12/2020** — sin mezclarlo con el fondo de menores. Es el riel, no la carga.
+
+Objetivo 1 — Skill que quede:
+- Que quede una skill útil para analizar los **diversos acuerdos** (son varios, cada uno con su lógica). 
+- Herramienta especializada, no genérica, calibrada a este caso específico (NEUN, expediente electrónico, Libros de Gobierno).
+
+Objetivo 2 — Partir del resultado:
+- Partimos del resultado ya documentado (`neunarena.md`: NEUN 41504452 sobrepuesto, 000000 como control actual, outlier 38654211).
+- Intrínsecamente en segundo plano, el sistema desarrolla automáticamente el flujo del asunto (reconstrucción inversa: del resultado → a la cadena rota).
+
+Siguiente paso:
+- Diseñar la skill `analizador-acuerdos` solo sobre el 12/2020 como base independiente.
+- Validar que esa misma estructura sirva para los demás acuerdos sin reescribirla.
+- Dejar que el flujo se genere en segundo plano desde el resultado ya aterrizado.

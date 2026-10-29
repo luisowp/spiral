@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "analisis-acuerdo",
+  "description": "Salida de skill analizador-acuerdos. Un acuerdo a la vez, lectura clara + integración.",
+  "type": "object",
+  "required": ["acuerdo_base", "articulo", "lectura_clara", "integracion_adicion", "conexion_caso"],
+  "properties": {
+    "acuerdo_base": { "type": "string", "example": "Acuerdo General 12/2020" },
+    "articulo": { "type": "string", "description": "Ej: Art. 7 - Integración cronológica" },
+    "cita_textual": { "type": "string" },
+    "lectura_clara": { "type": "string", "description": "Explicación en lenguaje claro de lo que dice el artículo" },
+    "integracion_adicion": { "type": "string", "description": "Qué adicionó un acuerdo posterior, integrado al texto base" },
+    "link_art_x": { "type": "string", "description": "URL a art. x/y cuando el acuerdo dice 'en términos del art. x'" },
+    "conexion_caso": {
+      "type": "object",
+      "properties": {
+        "obligacion": { "type": "string", "description": "Qué debió generarse: asiento Libro Gobierno, registro SISE, certificación fedatario" },
+        "observado_neunarena": { "type": "string", "example": "P7M fuente 13 abril sin continuidad a 0265|...|41504452|...|6660" },
+        "estado_cadena": { "type": "string", "enum": ["continua", "rota", "no localizado", "pendiente verificación"] }
+      }
+    },
+    "flujo_segundo_plano": { "type": "string", "description": "Reconstrucción automática desde resultado 000000 hacia atrás" }
+  }
+}
