@@ -1,2 +1,17 @@
 # cache and other artifacts produced by Lean's Lake build tool
 .lake/
+
+# Python bytecode produced by local validation and tests
+__pycache__/
+*.py[cod]
+
+# Material sensible para uso local: no debe publicarse en ramas o PR.
+/local-confidencial/
+/skills/analizador-acuerdos/AUDITORIA-*.md
+/skills/analizador-acuerdos/ejemplo-trazabilidad.json
+/skills/redaccion-vincular/AUDITORIA-*.md
+/skills/redaccion-vincular/CONTEXTO-CASO.md
+/skills/redaccion-vincular/PRIORIDAD-MEDIDAS-URGENTES.md
+/skills/redaccion-vincular/caso-ejemplo.json
+# Extracción preliminar con caracteres dañados; conservar solo localmente.
+/skills/analizador-acuerdos/corpus/AG-12-2020-V07.clean.txt

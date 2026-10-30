@@ -41,18 +41,18 @@ output_schema: "../_schemas/revision-documento.json"
 ## Reglas especiales (tratamiento especial)
 1. **No inventar norma:** si citas artículo/acuerdo, cita texto o di "no verificado en esta sesión".
 2. **Menores y datos sensibles:** minimiza exposición. Usa iniciales si es posible.
-3. **Voz del usuario:** respeta si habla como "Luis", "El Arquitecto" o "parte actora". No cambies identidad.
+3. **Voz del usuario:** respeta la voz que elija la persona usuaria. No cambies identidad.
 4. **No conclusión sin trazabilidad:** toda conclusión debe tener fila en tabla de hechos.
 
 ## Relación con formatos
 - **markdown:** es tu acta de lectura (humano).
 - **yaml:** configura qué revisar (ej: `enfasis: [plazos, notificaciones]`).
 - **json:** es tu prueba de trabajo estructurada (máquina).
-- **python:** es tu validador (verifica que JSON tenga citas y no haya hechos sin fuente).
+- **python:** es un validador estructural (no verifica autenticidad ni verdad de las fuentes).
 
 ## Ejemplo de invocación en ChatGPT
 ```
 Aplica protocolo-revision-documentos con enfasis en: plazos y omisión.
 Documento: [adjunta PDF]
-Contexto: Amparo 334/2026-4A, Recurso de Queja
+Contexto: EJEMPLO-FICTICIO, etapa por confirmar
 ```

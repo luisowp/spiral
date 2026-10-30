@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "nodos": [
+    {"id": "escrito", "descripcion": "Escrito ficticio"},
+    {"id": "anexos", "descripcion": "Anexos ficticios"},
+    {"id": "acuse", "descripcion": "Acuse ficticio"},
+    {"id": "turno", "descripcion": "Turno declarado"},
+    {"id": "expediente", "descripcion": "Expediente ficticio"},
+    {"id": "permiso", "descripcion": "Acceso por verificar"},
+    {"id": "notificacion", "descripcion": "Notificación posterior por verificar"},
+    {"id": "aislado", "descripcion": "Nodo sin relación declarada"}
+  ],
+  "conexiones": [
+    {"origen": "escrito", "destino": "acuse", "estado": "observado", "detalle": "El acuse ficticio identifica el escrito.", "fuente": "Acuse de ejemplo", "verificacion_pendiente": "Examinar contenido y firma."},
+    {"origen": "anexos", "destino": "acuse", "estado": "hipotesis", "detalle": "La referencia a anexos no acredita identidad de archivos ni su incorporación.", "fuente": "Acuse de ejemplo", "verificacion_pendiente": "Comparar archivos y registros."},
+    {"origen": "acuse", "destino": "turno", "estado": "observado", "detalle": "El documento ficticio reporta un turno.", "fuente": "Boleta de ejemplo", "verificacion_pendiente": "Cotejar el asiento."},
+    {"origen": "turno", "destino": "expediente", "estado": "pendiente", "detalle": "La integración del turno al expediente no consta en el ejemplo.", "fuente": "", "verificacion_pendiente": "Revisar registros de integración."},
+    {"origen": "expediente", "destino": "permiso", "estado": "pendiente", "detalle": "La solicitud o autorización de acceso no demuestra el alta técnica.", "fuente": "", "verificacion_pendiente": "Cotejar permisos."},
+    {"origen": "permiso", "destino": "notificacion", "estado": "pendiente", "detalle": "El permiso no acredita una notificación efectiva.", "fuente": "", "verificacion_pendiente": "Cotejar la constancia de notificación."}
+  ]
+}

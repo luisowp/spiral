@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "titulo": "Ejemplo completamente ficticio — borrador de prueba",
+  "fecha_corte": "2040-01-01",
+  "fuentes": [
+    {"id": "F1", "tipo": "reproduccion", "titulo": "Acuse ficticio", "ubicacion": "Ejemplo local", "limite": "No acredita la ejecución de una medida."},
+    {"id": "F2", "tipo": "relato", "titulo": "Relato ficticio", "ubicacion": "Ejemplo local", "limite": "Está atribuido a una persona ficticia."},
+    {"id": "F3", "tipo": "reproduccion", "titulo": "Constancia ficticia", "ubicacion": "Ejemplo local", "limite": "Solo describe el contenido que la copia reporta."},
+    {"id": "F4", "tipo": "analisis", "titulo": "Hipótesis ficticia", "ubicacion": "Ejemplo local", "limite": "No es una pericial ni una conclusión demostrada."}
+  ],
+  "hechos": [
+    {"id": "H1", "estado": "documento", "contenido": "El acuse ficticio identifica una solicitud de medidas.", "fuentes": ["F1"], "limite": "Recepción no equivale a decisión o cumplimiento."},
+    {"id": "H2", "estado": "relato", "contenido": "La persona ficticia relata una preocupación familiar.", "fuentes": ["F2"], "limite": "No permite inferir por sí solo un riesgo concreto."},
+    {"id": "H3", "estado": "hipotesis", "contenido": "Se propone cotejar una posible discrepancia entre registros.", "fuentes": ["F4"], "limite": "La discrepancia y su causa requieren comprobación."},
+    {"id": "H4", "estado": "pendiente", "contenido": "No consta el resultado de la medida en este ejemplo.", "fuentes": [], "limite": "No consta no significa que el evento no ocurrió."},
+    {"id": "H5", "estado": "documento", "contenido": "Una constancia ficticia reporta una actuación.", "fuentes": ["F3"], "limite": "No acredita acceso, notificación o audiencia efectiva."},
+    {"id": "H6", "estado": "relato", "contenido": "La persona ficticia solicita una investigación independiente.", "fuentes": ["F2"], "limite": "La solicitud no demuestra delito."}
+  ],
+  "criterios": [
+    {"id": "J1", "cita": "Referencia familiar ficticia", "url": "https://example.org/norma-ficticia-familiar", "uso": "Solo demuestra la estructura.", "limite": "No es fuente jurídica real ni debe citarse."},
+    {"id": "J2", "cita": "Referencia de amparo ficticia", "url": "https://example.org/norma-ficticia-amparo", "uso": "Solo demuestra la separación de vías.", "limite": "No es fuente jurídica real ni debe citarse."},
+    {"id": "J3", "cita": "Referencia penal ficticia", "url": "https://example.org/norma-ficticia-penal", "uso": "Solo demuestra la estructura.", "limite": "No es fuente jurídica real ni debe citarse."},
+    {"id": "J4", "cita": "Referencia de petición ficticia", "url": "https://example.org/norma-ficticia-peticion", "uso": "Solo demuestra la estructura.", "limite": "No es fuente jurídica real ni debe citarse."},
+    {"id": "J5", "cita": "Referencia cautelar ficticia", "url": "https://example.org/norma-ficticia-cautelar", "uso": "Solo demuestra la estructura.", "limite": "No es fuente jurídica real ni debe citarse."}
+  ],
+  "bloques": [
+    {"id": "B1", "via": "familiar", "pregunta": "¿Cómo organizar la solicitud de protección ficticia?", "argumento": "Solicito que se examine individualmente la medida que pedí, sin presumir su resultado.", "hechos": ["H1", "H2", "H4"], "criterios": ["J1"], "peticiones": ["Revisar la solicitud y su efecto material."], "verificaciones": ["Cotejar constancias y vigencia normativa."]},
+    {"id": "B2", "via": "amparo", "pregunta": "¿Cómo contrastar las constancias ficticias?", "argumento": "Solicito cotejar la identidad y continuidad del expediente, sin anticipar una conclusión.", "hechos": ["H1", "H3", "H5"], "criterios": ["J2"], "peticiones": ["Revisar cada relación entre escrito, registro y acuerdo."], "verificaciones": ["Cotejar informes, acceso y notificaciones."]},
+    {"id": "B3", "via": "penal", "pregunta": "¿Cómo separar la investigación ficticia?", "argumento": "Pido una investigación independiente sin prejuzgar responsabilidad.", "hechos": ["H6"], "criterios": ["J3"], "peticiones": ["Preservar y examinar evidencia pertinente."], "verificaciones": ["Confirmar competencia y elementos."]},
+    {"id": "B4", "via": "peticion-cidh", "pregunta": "¿Cómo organizar una petición ficticia?", "argumento": "Solicito revisar si una petición individual tiene sustento y cumple sus requisitos.", "hechos": ["H2", "H3"], "criterios": ["J4"], "peticiones": ["Evaluar la información disponible."], "verificaciones": ["Examinar recursos y posibles excepciones."]},
+    {"id": "B5", "via": "cautelares-cidh", "pregunta": "¿Cómo valorar una solicitud cautelar ficticia?", "argumento": "Solicito valorar medidas concretas según el riesgo actual y su sustento.", "hechos": ["H2", "H4"], "criterios": ["J5"], "peticiones": ["Individualizar la medida solicitada."], "verificaciones": ["Verificar gravedad, urgencia y daño irreparable."]}
+  ]
+}
