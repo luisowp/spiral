@@ -1,0 +1,3 @@
+# Preserve bytes/encoding of the public legal source snapshots.
+skills/analizador-acuerdos/corpus/*.html -diff
+skills/analizador-acuerdos/corpus/*.txt -diff

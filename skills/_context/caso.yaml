@@ -1,10 +1,25 @@
-# YAML = criterio declarativo del caso (fuente única de verdad)
-# Edita aquí y se propaga a todas las skills. No hardcodees en el prompt.
-caso_id: "Amparo Indirecto 334/2026-4A"
-sede: Sinaloa
-etapa_procesal: Recurso de Queja
-tiempo_litigado: "7 meses"
-actor: "Luis Alberto Carvajal Durán (Luis) - padre, en causa propia"
-hechos_nucleo: "Patrón documentado de omisión y simulación procesal en Juzgado Familiar local + Juzgado de Distrito."
-tesis_fuerza: "renuncia jurisdiccional de facto"
-acuerdo_referencia: "Acuerdo General 4/2025"
+caso_id: EJEMPLO-FICTICIO
+sede: Por completar en contexto privado
+etapa_procesal: Pendiente de verificar
+tiempo_litigado: Pendiente de verificar
+actor: Persona usuaria (identidad suministrada de forma privada)
+hechos_nucleo: 'Plantilla ficticia: completar localmente con afirmaciones atribuidas y fuentes.'
+tesis_fuerza: Definida por la persona usuaria; no presupone hechos probados.
+idea_fuerza_SCJN: Pendiente de verificar competencia y procedencia.
+acuerdo_referencia: Consultar la norma aplicable y su versión vigente.
+objetivo: Determinar la protección o vía solicitada sin prometer un resultado.
+constantes_proteccion_infancia:
+  demanda_inicial:
+    estado: Pendiente de verificar
+    fecha_recepcion: Pendiente
+    folio_turno: Pendiente
+    contenido: Completar solo en contexto privado.
+  domicilio_desconocido:
+    estado: Pendiente de atribuir y actualizar
+    desde: Pendiente
+    contenido: No presupone ausencia de ubicación para terceros.
+  plazo_solicitado: Distinguir solicitud, plazo legal y orden concedida.
+  plazos_reales_a_contrastar: Verificar norma, vigencia, aplicación y cómputo.
+  respuesta_a_contrastar: Distinguir decisión, notificación, ejecución y efecto.
+contexto_redaccion: skills/redaccion-vincular/SKILL.md
+precedentes_redaccion: skills/redaccion-vincular/PRECEDENTES.md

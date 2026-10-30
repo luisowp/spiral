@@ -1,0 +1,14 @@
+interface:
+  display_name: Analizador Acuerdos — AG 12/2020 base
+  short_description: Lee acuerdos de forma independiente, integra adiciones y conecta art. x/y. Especializado en expediente electrónico y NEUN.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false
+# Dispara solo cuando el usuario sube un acuerdo o pide analizar AG 12/2020
+# No invoca a otras skills de fondo de menores en esta fase

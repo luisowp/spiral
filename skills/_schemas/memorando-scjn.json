@@ -5,7 +5,7 @@
   "type": "object",
   "required": ["caso_id", "etapa_procesal", "leading_case", "tesis_trascendencia", "prueba_falla_sistemica", "estrategia_litigio", "argumento_central"],
   "properties": {
-    "caso_id": { "type": "string", "example": "Amparo Indirecto 334/2026-4A" },
+    "caso_id": { "type": "string", "example": "EJEMPLO-FICTICIO" },
     "etapa_procesal": { "type": "string", "enum": ["Amparo Indirecto", "Recurso de Queja", "SEFA", "Reclamación", "Otro"] },
     "leading_case": {
       "type": "object",

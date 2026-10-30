@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "analisis-acuerdo",
+  "description": "Salida de skill analizador-acuerdos. Un acuerdo a la vez, lectura clara + integración.",
+  "type": "object",
+  "required": ["acuerdo_base", "articulo", "lectura_clara", "integracion_adicion", "conexion_caso"],
+  "properties": {
+    "acuerdo_base": { "type": "string", "example": "Acuerdo General 12/2020" },
+    "articulo": { "type": "string", "description": "Artículo y fracción verificados en la versión aplicable al hecho" },
+    "cita_textual": { "type": "string" },
+    "lectura_clara": { "type": "string", "description": "Explicación en lenguaje claro de lo que dice el artículo" },
+    "integracion_adicion": { "type": "string", "description": "Qué adicionó un acuerdo posterior, integrado al texto base" },
+    "link_art_x": { "type": "string", "description": "URL a art. x/y cuando el acuerdo dice 'en términos del art. x'" },
+    "conexion_caso": {
+      "type": "object",
+      "properties": {
+        "obligacion": { "type": "string", "description": "Obligación respaldada por artículo y versión aplicable; no inventar un asiento o certificación" },
+        "observado_neunarena": { "type": "string", "description": "Observación o hipótesis consignada en la nota; diferenciarla de las fuentes primarias" },
+        "estado_cadena": { "type": "string", "description": "Solo indicar rota o continua cuando la evidencia disponible lo demuestre; de lo contrario, conservar pendiente", "enum": ["continua", "rota", "no localizado", "pendiente verificación"] }
+      }
+    },
+    "flujo_segundo_plano": { "type": "string", "description": "Reconstrucción desde el resultado observado hacia sus posibles eslabones, fuentes y pruebas faltantes, sin presuponer ruptura" }
+  }
+}

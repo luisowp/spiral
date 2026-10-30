@@ -1,0 +1,10 @@
+interface:
+  display_name: Redacción vincular e interamericana
+  short_description: Conserva la voz de la persona usuaria y separa fuentes, límites y vías.
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: false
