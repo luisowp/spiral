@@ -15,7 +15,7 @@
       "type": "object",
       "properties": {
         "obligacion": { "type": "string", "description": "Obligación respaldada por artículo y versión aplicable; no inventar un asiento o certificación" },
-        "observado_neunarena": { "type": "string", "description": "Observación o hipótesis consignada en la nota; diferenciarla de las fuentes primarias" },
+        "observado_en_fuentes": { "type": "string", "description": "Observación o hipótesis declarada; diferenciarla de las fuentes primarias" },
         "estado_cadena": { "type": "string", "description": "Solo indicar rota o continua cuando la evidencia disponible lo demuestre; de lo contrario, conservar pendiente", "enum": ["continua", "rota", "no localizado", "pendiente verificación"] }
       }
     },
